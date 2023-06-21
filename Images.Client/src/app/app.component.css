@@ -1,0 +1,15 @@
+.file-input {
+    display: none;
+  }
+
+  .example-card {
+    max-width: 200px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+.header{
+  background-color: antiquewhite;
+}

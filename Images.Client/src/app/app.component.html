@@ -1,0 +1,21 @@
+<mat-toolbar class="header">
+  <input type="file" class="file-input"
+  (change)="onFileSelected($event)" #fileUpload>
+  <div class="file-upload">
+    {{fileNameToUpload || "No file uploaded yet."}}
+    <button mat-raised-button color="primary" class="upload-btn"
+    (click)="fileUpload.click()">
+    Upload
+    </button>
+  </div>
+</mat-toolbar>
+
+<div>
+  <mat-grid-list cols="8">
+    <mat-grid-tile *ngFor="let file of filesLoaded">
+      <mat-card class="example-card">
+        <img mat-card-image [src]='file.url' alt="Photo">
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
