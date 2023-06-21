@@ -16,7 +16,7 @@ public class ImagesController : ControllerBase
         _service = service;
     }
 
-    [HttpGet("/list")]
+    [HttpGet]
     public ResultViewModel<IEnumerable<ImageViewModel>> All()
     {
         return _service.All();
